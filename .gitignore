@@ -1,0 +1,19 @@
+# Python artifacts
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Virtual Environment / Micromamba
+.env
+env/
+venv/
+
+# Deep Learning Data & Models (Crucial to ignore)
+data/
+models/*.pt
+models/*.pth
+logs/
+
+# IDE settings
+.vscode/
+.idea/
