@@ -3,6 +3,8 @@ import os
 from src.config import SegmentationConfig
 from src.data_loader import CardiacDataModule
 from src.train import CardiacTrainer
+# os.environ["TORCH_CUDA_SANITY_CHECK"] = "0"
+# os.environ["CUDA_MODULE_LOADING"] = "LAZY"
 
 def main():
     # 1. Instantiate isolated configuration
@@ -13,12 +15,12 @@ def main():
     os.makedirs(config.log_dir, exist_ok=True)
     
     # 3. Initialize your data pipeline
-    print("📦 Loading dataset and initializing MONAI CacheDataset (this may take a moment)...")
+    print("Loading dataset and initializing MONAI CacheDataset (this may take a moment)...")
     data_module = CardiacDataModule(config)
     data_module.setup()
     
     # 4. Run training loop
-    print("🏗️ Building SwinUNETR architecture and starting training pipeline...")
+    print("---> Building SwinUNETR architecture and starting training pipeline...")
     trainer = CardiacTrainer(config, data_module)
     trainer.fit()
 

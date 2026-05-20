@@ -17,19 +17,19 @@ class SegmentationConfig:
 
     # Training Hyperparameters
     batch_size: int = 1
-    num_epochs: int = 500
+    num_epochs: int = 5
     learning_rate: float = 1e-4
     weight_decay: float = 1e-5
 
     # Target spacing and crop size matching the tutorial workflow
     spatial_size: Tuple[int, int, int] = (96, 96, 96)
-    spacing: Tuple[float, float, float] = (1.0, 1.0, 1.0)  # FIXED: Reflects true isotropic data
-    intensity_range: Tuple[int, int] = (-175, 250)  # Solid CT window for soft tissue / blood pools
+    spacing: Tuple[float, float, float] = (1.0, 1.0, 1.0)  # Reflects true isotropic data
+    intensity_range: Tuple[int, int] = (-175, 250)  # CT window for soft tissue / blood pools
 
     # Validation & Runtime
-    val_interval: int = 5
+    val_interval: int = 1
     device: str = "cuda:0"
-    num_workers: int = 4
+    num_workers: int = 0
     pin_memory: bool = True
 
     # Output paths
