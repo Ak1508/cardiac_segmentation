@@ -11,7 +11,7 @@ if OTHER_PROJECT_PATH not in sys.path:
 
 
 from dicom_converter import load_dicom_series, poly2mask
-from src.roi_mapping import get_class_label, clean_roi_name
+from src.roi_mapping import get_class_label
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)

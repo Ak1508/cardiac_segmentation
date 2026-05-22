@@ -8,7 +8,7 @@ class SegmentationConfig:
     # Data paths relative to the project root
     data_dir: str = "./data/processed/"
     dataset_json: str = "dataset.json"  # FIXED: Matches our generated manifest name
-    num_classes: int = 5  # 0:background, 1:LV, 2:RV, 3:LA, 4:RA
+    num_classes: int = 20  # 0:background, 1:LV, 2:RV, 3:LA, 4:RA
 
     # Model parameters
     model_name: str = "swin_unetr"

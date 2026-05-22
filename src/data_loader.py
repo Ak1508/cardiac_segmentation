@@ -33,3 +33,9 @@ class CardiacDataModule:
             } 
             for f in file_list
         ]
+    
+if __name__ == "__main__":
+    print("Data loader module is loaded and executing!")
+    # Add a test call here if you have a class, e.g.:
+    # test_loader = YourDataLoaderClass()
+    # print("Test loader initialized successfully.")
